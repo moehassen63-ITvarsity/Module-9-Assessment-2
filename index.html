@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>World Clock App</title>
+    <title>World Clock</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -25,6 +25,16 @@
         { name: "Sydney", utcOffset: 11, flag: "Australia.png" },
         { name: "Vancouver", utcOffset: -8, flag: "Canada.png" },
         { name: "Beijing", utcOffset: 8, flag: "China.png" },
+        {
+          name: "Florida",
+          utcOffset: -4,
+          flag: "United-States-of-America.png",
+        },
+        { name: "Caracas", utcOffset: -4, flag: "Venezuela.png" },
+        { name: "Porto-Novo", utcOffset: 1, flag: "Benin.png" },
+        { name: "Amman", utcOffset: 3, flag: "Jordan.png" },
+        { name: "Dhaka", utcOffset: 6, flag: "Bangladesh.png" },
+        { name: "Buenos Aires", utcOffset: -3, flag: "Argentina.png" },
       ];
       cities.sort(compare);
       function compare(a, b) {
