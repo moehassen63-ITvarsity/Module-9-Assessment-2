@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>World Clock</title>
+    <title>World Clock App</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <p id="local">Loading...</p>
     <div id="output"></div>
     <script>
-      var timer=setInterval(displayWorldTime,1000);
+      var timer = setInterval(displayWorldTime, 1000);
       var cities = [
         { name: "Istanbul", utcOffset: 3, flag: "Turkey.png" },
         {
@@ -54,28 +54,28 @@
 
       function displayWorldTime() {
         var dt = new Date();
-        document.getElementById("local").innerHTML = `Local Time :`+dt.toLocaleTimeString();
-        var output=`<table id="cities">`;
-        output+=`<tr>
+        document.getElementById("local").innerHTML =
+          `Local Time :` + dt.toLocaleTimeString();
+        var output = `<table id="cities">`;
+        output += `<tr>
                       <th class="col1"></th>
                       <th class="col2"></th>
                       <th></th>
                  </tr>`;
 
-                      for(a=0;a<cities.length;a++){
-                        output+=`
+        for (a = 0; a < cities.length; a++) {
+          output += `
                         <tr>
                           <td><img src="img/${cities[a].flag}"</td>
                           <td>${cities[a].name}</td>
                           <td>${getCurrentTime(cities[a].utcOffset)}</td>
                         </tr>
                         
-                        `
-                      }
-                      output+=`</table>`
-                      document.getElementById("output").innerHTML=output;
-        
+                        `;
         }
+        output += `</table>`;
+        document.getElementById("output").innerHTML = output;
+      }
     </script>
   </body>
 </html>
